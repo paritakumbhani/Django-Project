@@ -1,0 +1,21 @@
+from django.db import models
+
+class Cheese(models.Model):
+    CheeseId = models.CharField(max_length=10) 
+    CheeseNameEn = models.CharField(max_length=100) 
+    ManufacturerNameEn = models.CharField(max_length=300) 
+    ManufacturerProvCode = models.CharField(max_length=2) 
+    ManufacturingTypeEn = models.CharField(max_length=50) 
+    WebSiteEn = models.CharField(max_length=300) 
+    FatContentPercent = models.CharField(max_length=50) 
+    MoisturePercent = models.CharField(max_length=50) 
+    ParticularitiesEn = models.CharField(max_length=300) 
+    FlavourEn = models.CharField(max_length=200) 
+    CharacteristicsEn = models.CharField(max_length=500) 
+    RipeningEn = models.CharField(max_length=50) 
+    Organic = models.CharField(max_length=2) 
+    CategoryTypeEn = models.CharField(max_length=200) 
+    MilkTypeEn = models.CharField(max_length=50) 
+    MilkTreatmentTypeEn = models.CharField(max_length=50) 
+    RindTypeEn = models.CharField(max_length=50) 
+    LastUpdateDate = models.CharField(max_length=10) 

@@ -1,0 +1,57 @@
+{% extends 'application/header.html' %}
+
+
+{% block pages %}
+<div style="width:90%;margin:auto">
+    <form class="row" action="" method="POST">
+        {% csrf_token %}
+        <div class="col s12">
+            <label>Filter 1</label>
+            <select class="browser-default" name="filter_1">
+                <option value="" selected>Choose Filter</option>
+                {% for colData in columns %}
+                <option value="{{colData.name}}">{{colData.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="input-field col s12 ">
+            <input type="text" name="value_1">
+            <label for="">Value</label>
+        </div>
+        <div class="col s12">
+            <label>Filter 2</label>
+            <select class="browser-default" name="filter_2">
+                <option value="" selected>Choose Filter</option>
+                {% for colData in columns %}
+                <option value="{{colData.name}}">{{colData.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="input-field col s12 ">
+            <input type="text" name="value_2">
+            <label for="">Value</label>
+        </div>
+        <div class="col s12">
+            <label>Filter 3</label>
+            <select class="browser-default" name="filter_3">
+                <option value="" selected>Choose Filter</option>
+                {% for colData in columns %}
+                <option value="{{colData.name}}">{{colData.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="input-field col s12 ">
+            <input type="text" name="value_3">
+            <label for="">Value</label>
+        </div>
+        <input class="btn black col s4 center" type="submit" value="Filter">
+    </form>
+</div>
+
+<script>
+    error = "{{error}}";
+    if (error) {
+        alert(error);
+    }
+</script>
+{% endblock %}

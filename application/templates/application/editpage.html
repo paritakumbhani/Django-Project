@@ -1,0 +1,85 @@
+{% extends 'application/header.html' %}
+
+
+{% block pages %}
+<div style="width:90%;margin:auto">
+    <form class="row card" action="../editpage" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="index" value="{{index}}">
+        <div class="input-field col s12 m3">
+            <input type="text" name="CheeseId" value="{{ dbData.0.CheeseId }}">
+            <label for="">CheeseId</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="CheeseNameEn" value="{{ dbData.0.CheeseNameEn }}">
+            <label for="">CheeseNameEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="ManufacturerNameEn" value="{{ dbData.0.ManufacturerNameEn }}">
+            <label for="">ManufacturerNameEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="ManufacturerProvCode" value="{{ dbData.0.ManufacturerProvCode }}">
+            <label for="">ManufacturerProvCode</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="ManufacturingTypeEn" value="{{ dbData.0.ManufacturingTypeEn }}">
+            <label for="">ManufacturingTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="WebSiteEn" value="{{ dbData.0.WebSiteEn }}">
+            <label for="">WebSiteEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="FatContentPercent" value="{{ dbData.0.FatContentPercent }}">
+            <label for="">FatContentPercent</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="MoisturePercent" value="{{ dbData.0.MoisturePercent }}">
+            <label for="">MoisturePercent</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="ParticularitiesEn" value="{{ dbData.0.ParticularitiesEn }}">
+            <label for="">ParticularitiesEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="FlavourEn" value="{{ dbData.0.FlavourEn }}">
+            <label for="">FlavourEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="CharacteristicsEn" value="{{ dbData.0.CharacteristicsEn }}">
+            <label for="">CharacteristicsEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="RipeningEn" value="{{ dbData.0.RipeningEn }}">
+            <label for="">RipeningEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="Organic" value="{{ dbData.0.Organic }}">
+            <label for="">Organic</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="CategoryTypeEn" value="{{ dbData.0.CategoryTypeEn }}">
+            <label for="">CategoryTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="MilkTypeEn" value="{{ dbData.0.MilkTypeEn }}">
+            <label for="">MilkTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="MilkTreatmentTypeEn" value="{{ dbData.0.MilkTreatmentTypeEn }}">
+            <label for="">MilkTreatmentTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="RindTypeEn" value="{{ dbData.0.RindTypeEn }}">
+            <label for="">RindTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="LastUpdateDate" value="{{ dbData.0.LastUpdateDate }}">
+            <label for="">LastUpdateDate</label>
+        </div>
+        <input class="btn black col s4" type="submit" value="Update">
+    </form>
+</div>
+
+{% endblock %}

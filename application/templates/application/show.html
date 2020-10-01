@@ -1,0 +1,30 @@
+{% extends 'application/header.html' %}
+
+
+{% block pages %}
+<div class="card" style="margin:10px;overflow-y:scroll;height:80vh;">
+    <table class="centered">
+        <thead>
+            {% for colData in columns %}
+            <th>{{colData.name}}</th>
+            {% endfor %}
+        </thead>
+        <tbody>
+            {% for data in dbData %}
+            <tr>
+                {% for k,v in data.items %}
+                <td>{{v}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<script>
+    error = "{{error}}";
+    if (error) {
+        alert(error);
+    }
+</script>
+{% endblock %}

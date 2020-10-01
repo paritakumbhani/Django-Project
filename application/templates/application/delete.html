@@ -1,0 +1,39 @@
+{% extends 'application/header.html' %}
+
+
+{% block pages %}
+<form action="" method="post">
+    {% csrf_token %}
+    <div class="card" style="margin:10px;overflow-y:scroll;height:60vh;">
+
+        <table class="centered">
+            <thead>
+                <th>Select</th>
+                {% for colData in columns %}
+                <th>{{colData.name}}</th>
+                {% endfor %}
+            </thead>
+            <tbody>
+                {% for data in dbData %}
+                <tr>
+                    <td>
+                        <label>
+                            <input name="index" type="radio" value="{{ data.id }}" />
+                            <span></span>
+                        </label>
+                    </td>
+                    {% for k,v in data.items %}
+                    <td>{{v}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+    <div class="row">
+        <input class="btn black col s4 offset-s4" type="submit" value="Delete">
+    </div>
+</form>
+
+{% endblock %}

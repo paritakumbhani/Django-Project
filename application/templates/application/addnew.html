@@ -1,0 +1,90 @@
+{% extends 'application/header.html' %}
+
+
+{% block pages %}
+<div style="width:90%;margin:auto">
+    <form class="row card" action="" method="post">
+        {% csrf_token %}
+        <div class="input-field col s12 m3">
+            <input type="text" name="CheeseId">
+            <label for="">CheeseId</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="CheeseNameEn">
+            <label for="">CheeseNameEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="ManufacturerNameEn">
+            <label for="">ManufacturerNameEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="ManufacturerProvCode">
+            <label for="">ManufacturerProvCode</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="ManufacturingTypeEn">
+            <label for="">ManufacturingTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="WebSiteEn">
+            <label for="">WebSiteEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="FatContentPercent">
+            <label for="">FatContentPercent</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="MoisturePercent">
+            <label for="">MoisturePercent</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="ParticularitiesEn">
+            <label for="">ParticularitiesEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="FlavourEn">
+            <label for="">FlavourEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="CharacteristicsEn">
+            <label for="">CharacteristicsEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="RipeningEn">
+            <label for="">RipeningEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="Organic">
+            <label for="">Organic</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="CategoryTypeEn">
+            <label for="">CategoryTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="MilkTypeEn">
+            <label for="">MilkTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="MilkTreatmentTypeEn">
+            <label for="">MilkTreatmentTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="RindTypeEn">
+            <label for="">RindTypeEn</label>
+        </div>
+        <div class="input-field col s12 m3">
+            <input type="text" name="LastUpdateDate">
+            <label for="">LastUpdateDate</label>
+        </div>
+        <input class="btn black col s4" type="submit" value="ADD NEW">
+    </form>
+</div>
+
+<script>
+    error = "{{error}}";
+    if (error) {
+        alert(error);
+    }
+</script>
+{% endblock %}
